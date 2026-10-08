@@ -1,5 +1,7 @@
 #!/bin/bash
 set -eu
 
-echo "Private repository marker:"
-cat owned-private-submodule/test
+{
+  echo "PRIVATE_SUBMODULE_CANARY:"
+  cat owned-private-submodule/test
+} | tee test-results.txt
